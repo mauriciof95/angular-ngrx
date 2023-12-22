@@ -30,78 +30,78 @@ export const LoadUsuarios = createAction(
 
 export const LoadUsuariosSuccess = createAction(
   UsuarioTypeAction.LOAD_USUARIOS_SUCCESS,
-  props<{payload: UsuarioModel[]}>
+  props<{payload: UsuarioModel[]}>()
 );
 
 export const LoadUsuariosFail = createAction(
   UsuarioTypeAction.LOAD_USUARIOS_FAIL,
-  props<{error: string}>
+  props<{error: string}>()
 );
 
 
 
 export const LoadUsuario = createAction(
   UsuarioTypeAction.LOAD_USUARIO,
-  props<{payload: number}>
+  props<{payload: number}>()
 );
 
 export const LoadUsuarioSuccess = createAction(
   UsuarioTypeAction.LOAD_USUARIO_SUCCESS,
-  props<{payload: UsuarioModel}>
+  props<{payload: UsuarioModel}>()
 );
 
 export const LoadUsuarioFail = createAction(
   UsuarioTypeAction.LOAD_USUARIO_FAIL,
-  props<{error: string}>
+  props<{error: string}>()
 );
 
 
 
 export const CreateUsuario = createAction(
   UsuarioTypeAction.CREATE_USUARIO,
-  props<{payload: UsuarioModel}>
+  props<{payload: UsuarioModel}>()
 );
 
 export const CreateUsuarioSuccess = createAction(
   UsuarioTypeAction.CREATE_USUARIO_SUCCESS,
-  props<{payload: UsuarioModel}>
+  props<{payload: UsuarioModel}>()
 );
 
 export const CreateUsuarioFail = createAction(
   UsuarioTypeAction.CREATE_USUARIO_FAIL,
-  props<{error: string}>
+  props<{error: string}>()
 );
 
 
 
 export const UpdateUsuario = createAction(
   UsuarioTypeAction.UPDATE_USUARIO,
-  props<{payload: UsuarioModel}>
+  props<{payload: UsuarioModel}>()
 );
 
 export const UpdateUsuarioSuccess = createAction(
   UsuarioTypeAction.UPDATE_USUARIO_SUCCESS,
-  props<{payload: UsuarioModel}>
+  props<{payload: UsuarioModel}>()
 );
 
 export const UpdateUsuarioFail = createAction(
   UsuarioTypeAction.UPDATE_USUARIO_FAIL,
-  props<{error: string}>
+  props<{error: string}>()
 );
 
 
 
 export const DeleteUsuario = createAction(
   UsuarioTypeAction.DELETE_USUARIO,
-  props<{payload: number}>
+  props<{payload: number}>()
 );
 
 export const DeleteUsuarioSuccess = createAction(
   UsuarioTypeAction.DELETE_USUARIO_SUCCESS,
-  props<{payload: number}>
+  props<{payload: number}>()
 );
 
 export const DeleteUsuarioFail = createAction(
   UsuarioTypeAction.DELETE_USUARIO_FAIL,
-  props<{error: string}>
+  props<{error: string}>()
 );

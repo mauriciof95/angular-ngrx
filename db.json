@@ -23,6 +23,12 @@
       "nome": "Sergio Herman",
       "idade": 35,
       "perfil": "Gerente"
+    },
+    {
+      "id": 5,
+      "nome": "Sophia Xavier",
+      "idade": "25",
+      "perfil": "Consultor"
     }
   ]
 }

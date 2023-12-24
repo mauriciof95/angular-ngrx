@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioModel } from '../models/UsuarioModel';
 import { UsuarioServices } from '../services/UsuarioServices';
-
+import { AppState } from '../Store/app.state';
+import { Store } from '@ngrx/store';
+import * as fromUsuariosActions from '../Store/usuarios/usuarios.actions';
 @Component({
   selector: 'app-cadastro-usuarios',
   templateUrl: './cadastro-usuarios.component.html',
@@ -10,7 +12,7 @@ import { UsuarioServices } from '../services/UsuarioServices';
 export class CadastroUsuariosComponent implements OnInit {
   model: UsuarioModel = {id: 0, nome: "", idade: 0, perfil: ""};
 
-  constructor(private usuarioService: UsuarioServices) { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +20,7 @@ export class CadastroUsuariosComponent implements OnInit {
   addUsuario(){
     if(this.model.id == 0){
       console.log("cadastrando", this.model);
-      this.usuarioService.addUsuario(this.model).subscribe();
+      this.store.dispatch(fromUsuariosActions.CreateUsuario({payload: this.model}))
     }else{
 
     }

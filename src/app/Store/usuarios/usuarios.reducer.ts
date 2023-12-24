@@ -1,6 +1,6 @@
-import { Action, createReducer, on } from "@ngrx/store";
+import { Action, createFeatureSelector, createReducer, createSelector, on } from "@ngrx/store";
 import { UsuarioModel } from "src/app/models/UsuarioModel";
-import * as fromUsuariosActions from "../usuarios/usuarios.actions";
+import * as fromUsuariosActions from "./usuarios.actions";
 
 export interface UsuariosState{
   usuarios: UsuarioModel[];
@@ -42,6 +42,25 @@ const _usuarioReducer = createReducer(
   on(fromUsuariosActions.DeleteUsuarioFail, (state, { error }) => ({...state, error: error})),
 );
 
-export function usuariosReduce(state = initialState, action: Action){
+export function usuariosReducer(state = initialState, action: Action){
   return _usuarioReducer(state, action);
 }
+
+//selectors
+
+const getUsuariosFeatureState = createFeatureSelector<UsuariosState>('usuarios');
+
+export const getUsuarios = createSelector(
+  getUsuariosFeatureState,
+  (state: UsuariosState) => state.usuarios
+)
+
+export const getUsuario = createSelector(
+  getUsuariosFeatureState,
+  (state: UsuariosState) => state.usuario
+)
+
+export const getUsuarioErro = createSelector(
+  getUsuariosFeatureState,
+  (state: UsuariosState) => state.error
+)

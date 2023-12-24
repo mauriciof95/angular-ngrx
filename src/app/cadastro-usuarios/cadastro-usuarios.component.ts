@@ -22,7 +22,8 @@ export class CadastroUsuariosComponent implements OnInit {
       console.log("cadastrando", this.model);
       this.store.dispatch(fromUsuariosActions.CreateUsuario({payload: this.model}))
     }else{
-
+      console.log("atualizando", this.model);
+      this.store.dispatch(fromUsuariosActions.UpdateUsuario({payload: this.model}))
     }
   }
 }

@@ -14,9 +14,9 @@
     },
     {
       "id": 3,
-      "nome": "Usuario 3",
-      "idade": 25,
-      "perfil": "Consultor"
+      "nome": "Usuario 3 Editado",
+      "idade": "30",
+      "perfil": "Gerente"
     },
     {
       "id": 4,

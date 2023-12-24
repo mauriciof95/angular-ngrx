@@ -1,24 +1,37 @@
 <p>cadastro-usuarios works!</p>
 
 <form (ngSubmit)="addUsuario()">
-  <div class="col-6">
-    <label for="">ID</label>
-    <input type="text" id="" name="id" [(ngModel)]="model.id" class="form-control" type="text">
-  </div>
-  <div class="col-6">
-    <label for="">NOME</label>
-    <input type="text" id="" name="nome" [(ngModel)]="model.nome" class="form-control" type="text">
-  </div>
-  <div class="col-6">
-    <label for="">IDADE</label>
-    <input type="text" id="" name="idade" [(ngModel)]="model.idade" class="form-control" type="text">
-  </div>
-  <div class="col-6">
-    <label for="">PERFIL</label>
-    <input type="text" id="" name="perfil" [(ngModel)]="model.perfil" class="form-control" type="text">
+  <div class="row mb-2">
+    <div class="col-6">
+      <label for="">ID</label>
+      <input type="text" id="" name="id" [(ngModel)]="model.id" class="form-control" type="text">
+    </div>
   </div>
 
-  <div class="col-6">
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <div class="row mb-2">
+    <div class="col-6">
+      <label for="">NOME</label>
+      <input type="text" id="" name="nome" [(ngModel)]="model.nome" class="form-control" type="text">
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6">
+      <label for="">IDADE</label>
+      <input type="text" id="" name="idade" [(ngModel)]="model.idade" class="form-control" type="text">
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-6">
+      <label for="">PERFIL</label>
+      <input type="text" id="" name="perfil" [(ngModel)]="model.perfil" class="form-control" type="text">
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary">{{ model.id > 0 ? 'Atualizar' : 'Cadastrar'}}</button>
+    </div>
   </div>
 </form>

@@ -19,9 +19,14 @@ export class ListarUsuariosComponent implements OnInit {
   ) { }
 
   listaUsuarios$: Observable<UsuarioModel[]> = this.store.select(fromUsuariosSelector.getUsuarios);
+  usuario$: Observable<UsuarioModel | null> = this.store.select(fromUsuariosSelector.getUsuario);
 
   ngOnInit(): void {
     this.store.dispatch(fromUsuariosActions.LoadUsuarios())
   }
 
+  editar(id: number)
+  {
+    this.store.dispatch(fromUsuariosActions.LoadUsuario({payload: id}));
+  }
 }

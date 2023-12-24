@@ -29,4 +29,9 @@ export class ListarUsuariosComponent implements OnInit {
   {
     this.store.dispatch(fromUsuariosActions.LoadUsuario({payload: id}));
   }
+
+  excluir(id: number)
+  {
+    this.store.dispatch(fromUsuariosActions.DeleteUsuario({payload: id}));
+  }
 }
